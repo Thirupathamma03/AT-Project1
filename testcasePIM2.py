@@ -76,6 +76,19 @@ class OrangeHRMLoginTest(unittest.TestCase):
         save_butoon.click()
         time.sleep(2)
 
+         emp_list=self.driver.find_element(By.XPATH,"//*[@id='app']/div[1]/div[1]/header/div[2]/nav/ul/li[2]")
+        emp_list.click()
+        time.sleep(2)
+
+
+        del_person=self.driver.find_element(By.XPATH,"(//i[@class='oxd-icon bi-trash'])[8]")
+        del_person.click()
+        time.sleep(5)
+
+        del_button=self.driver.find_element(By.XPATH,"//button[normalize-space()='Yes, Delete']")
+        del_button.click()
+        time.sleep(5)
+
     def tearDown(self):
         self.driver.quit()
 
